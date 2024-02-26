@@ -87,12 +87,9 @@ SERVICE DATA GET IN FRONTEND LOGIC
     }
   };
 
-
-
   /* Get product data ........................
   data products ka ..................................
   .*/
-
   const getProductData = async () => {
     try {
       const response = await fetch("http://localhost:5000/api/data/product", {
@@ -141,7 +138,7 @@ const incrementQuantity = (productId) => {
     return item;
   });
   setCart(updatedCart);
-  setCartCount(prevCount => prevCount + 1); // Increment cartCount
+  setCartCount(prevCount => prevCount + 1); 
 };
 
 const decrementQuantity = (productId) => {
@@ -152,7 +149,7 @@ const decrementQuantity = (productId) => {
     return item;
   });
   setCart(updatedCart);
-  setCartCount(prevCount => prevCount - 1); // Decrement cartCount
+  setCartCount(prevCount => prevCount - 1); 
 };
 
 const clearCart = () => {
@@ -178,11 +175,7 @@ NAVBAR RESPONSIVE LOGIC
   useEffect(() => {
     userAuthentication();
     getServiceData();
-    getProductData();
-  
-    // addToCart()
-    // removeFromCart()
-  
+    getProductData(); 
   }, [token]);
 
   useEffect(() => {
@@ -208,15 +201,6 @@ NAVBAR RESPONSIVE LOGIC
     incrementQuantity,
     decrementQuantity,
     clearCart,
-  
-  
-  
-
-
-   
-    
-
-    
   };
 
   return <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>;

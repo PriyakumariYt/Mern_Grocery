@@ -1,5 +1,3 @@
-
-
 const Payment = require("../Models/payment-models");
 
 const processPayment = async (req, res) => {

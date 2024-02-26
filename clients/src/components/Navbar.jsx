@@ -11,7 +11,6 @@ const Navbar = () => {
   console.log("login or not ", isLoggedIn);
   // const {user} = useAuth()
  
- 
   return (
     <>
       <div className="header-1">

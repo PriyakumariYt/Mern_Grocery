@@ -2,7 +2,6 @@ const Service=  require("../Models/service-models")
 const services = async (req, res) => {
     try {
       const response = await Service.find();
-  
       if (!response || response.length === 0) {
         // Check if the response is empty or null
         res.status(404).json({ msg: "No Service Found" });
